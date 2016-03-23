@@ -1,0 +1,100 @@
+// Grid Defaults
+$minimal-grid-container-max-width:1200px;
+$minimal-grid-gutter-width:20px;
+$screen-breakpoint:768px;
+
+@mixin col($percentage) {
+  width:$percentage * 100%;
+}
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+%grid-block {
+  padding-left:($minimal-grid-gutter-width/2);
+  padding-right:($minimal-grid-gutter-width/2);
+  display: inline-block;
+  float: left;
+}
+
+%grid-block-collapse {
+  display: inline-block;
+  float: left;
+}
+
+%grid-container {
+  position:relative;
+  margin: 0 auto;
+  padding:($minimal-grid-gutter-width/2);
+  @extend %clearfix;
+}
+
+%grid-container-collapse {
+  position:relative;
+  margin: 0 auto;
+  @extend %clearfix;
+}
+
+
+
+
+
+// Legacy support
+.row {
+  @extend %clearfix;
+}
+
+.grid {
+  @extend %grid-container-collapse;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 73.125rem;
+  padding-left:  ($minimal-grid-gutter-width / 2);
+  padding-right: ($minimal-grid-gutter-width / 2);
+  margin-right: auto;
+  margin-left: auto;
+  @extend %clearfix;
+
+  &.fluid {
+    padding:0;
+  }
+
+  &.full {
+    max-width:100%;
+    padding: 0 0.9%;
+  }
+}
+
+[class*='col-'] {
+  width: 100%;
+  @extend %grid-block;
+
+  @media (min-width: $screen-breakpoint) {
+    &.col-2-3 {
+      @include col(2/3);
+    }
+    &.col-1-3 {
+      @include col(1/3);
+    }
+    &.col-1-2 {
+      @include col(1/2);
+    }
+    &.col-1-4 {
+      @include col(1/4);
+    }
+    &.col-1-5 {
+      @include col(1/5);
+    }
+    &.col-1-8 {
+      @include col(1/8);
+    }
+  }
+}
