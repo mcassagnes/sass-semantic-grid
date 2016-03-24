@@ -1,5 +1,5 @@
-# css-semantic-grid
-Simple css grid system to help you keep your HTML markup semantic-oriented.
+# sass-semantic-grid
+Simple sass grid system to help you keep your HTML markup semantic-oriented.
 
 #####This is not easy to read
 ```html
