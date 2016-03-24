@@ -15,7 +15,7 @@ Simple css grid system to help you keep your HTML markup semantic-oriented.
 #####This makes more sense
 ```html
 <div class="items">
-  <div class="item>
+  <div class="item">
     <!-- more markup -->
   </div>
 </div>
