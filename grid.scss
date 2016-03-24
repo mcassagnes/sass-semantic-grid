@@ -3,8 +3,8 @@ $minimal-grid-container-max-width:1200px;
 $minimal-grid-gutter-width:20px;
 $screen-breakpoint:768px;
 
-@mixin col($percentage) {
-  width:$percentage * 100%;
+@mixin col($ratio) {
+  width:$ratio * 100%;
 }
 
 %clearfix {
