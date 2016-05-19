@@ -28,7 +28,7 @@ Simple sass grid system to help you keep your HTML markup semantic-oriented.
   
   .item {
     @extend %grid-block;
-    @include grid(1/3);
+    @include col(1/3);
   }
 }
 ```
